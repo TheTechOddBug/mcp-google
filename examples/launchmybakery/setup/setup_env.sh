@@ -17,10 +17,10 @@ gcloud services enable aiplatform.googleapis.com --project=$PROJECT_ID
 gcloud services enable apikeys.googleapis.com --project=$PROJECT_ID
 gcloud services enable mapstools.googleapis.com --project=$PROJECT_ID
 ENABLED_SERVICES=$(gcloud beta services mcp list --enabled --format="value(name.basename())" --project=$PROJECT_ID)
-if [[ "$ENABLED_SERVICES" == *"mapstools.googleapis.com"* ]]; then
+if [[ ! "$ENABLED_SERVICES" == *"mapstools.googleapis.com"* ]]; then
     gcloud beta services mcp enable mapstools.googleapis.com --project=$PROJECT_ID
 fi
-if [[ "$ENABLED_SERVICES" == *"bigquery.googleapis.com"* ]]; then
+if [[ ! "$ENABLED_SERVICES" == *"bigquery.googleapis.com"* ]]; then
     gcloud beta services mcp enable bigquery.googleapis.com --project=$PROJECT_ID
 fi
 
