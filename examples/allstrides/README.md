@@ -1,5 +1,24 @@
 # AllStrides: Google remote MCP for Cloud SQL and Developer Knowledge
 
+[![Google Cloud](https://img.shields.io/badge/Blog-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/blog/products/ai-machine-learning/announcing-official-mcp-support-for-google-services)
+[![Codelab](https://img.shields.io/badge/Codelab-58A55d.svg?style=for-the-badge&logo=devbox&logoColor=white)](https://codelabs.developers.google.com/ai-mcp-dk-csql#0)
+
+This directory contains the data artifacts and infrastructure setup scripts for the **Google remote MCP for Cloud SQL and Developer Knowledge** demo.  
+
+## Demo Overview
+
+This scenario demonstrates an AI Agent's ability to act as a Product Architect, migrating a localized application to the cloud using Google Model Context Protocol (MCP) servers. By equipping Gemini CLI with access to Cloud SQL, Developer Knowledge and Cloud Run MCP, you can transform a manual deployment process into an agentic orchestration.
+
+> **"How do I evolve AllStrides from a local-only prototype into a secure, globally accessible enterprise platform?"**
+
+Gemini CLI interacts with the Google Cloud ecosystem by leveraging three specific MCP servers to modernize the stack:
+
+1.  **Developer Knowledge MCP**: To analyze the current application structure and identify the optimal Google Cloud database.
+2.  **Cloud SQL MCP**: To provision a production-grade database instance and migrate local fitness community data to the cloud via a single natural language prompt.
+3.  **Cloud Run MCP**: To containerize the allstrides application and deploy it to a serverless environment, making AllStrides live and accessible to users worldwide.
+
+### Architecture Diagram
+
 <img width="941" height="439" alt="Developer-knowledge-mcp-cloudsql-mcp-cloudrun-mcp" src="https://github.com/user-attachments/assets/cbbc8785-41c5-4e1c-87c5-bae1bfa77f5e" />
 
 
