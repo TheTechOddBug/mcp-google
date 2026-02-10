@@ -1,5 +1,8 @@
 # AllStrides: Google remote MCP for Cloud SQL and Developer Knowledge
 
+<img width="941" height="439" alt="Developer-knowledge-mcp-cloudsql-mcp-cloudrun-mcp" src="https://github.com/user-attachments/assets/cbbc8785-41c5-4e1c-87c5-bae1bfa77f5e" />
+
+
 This directory contains the sample application artifacts and a lab demonstrating how the MCP support for Developer Knowledge, Databases ad Cloud Run help to migrate demo application to the cloud.
 ## Sample Application
 The sample "Allstrides" application is featuring event management, fuser authentication, profile management, event CRUD operations, RSVP functionality, and real-time chat.
