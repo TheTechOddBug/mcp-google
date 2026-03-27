@@ -119,7 +119,7 @@ pip install google-adk
 cd adk_agent/
 
 # Run the ADK web interface
-adk web
+adk web --allow_origins 'regex:https://.*\.cloudshell\.dev'
 ```
 
 ### 6. Chat with the Agent

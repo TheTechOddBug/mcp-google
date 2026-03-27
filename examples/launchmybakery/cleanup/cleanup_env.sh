@@ -5,10 +5,18 @@
 # ==========================================
 
 # 1. Configuration & Project Detection
-PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
-DATASET_NAME="mcp_bakery"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ENV_FILE="$SCRIPT_DIR/../adk_agent/mcp_bakery_app/.env"
+DATASET_NAME="mcp_bakery"
+
+# Attempt to load Project ID from local .env if available (supports multi-session/cloud shell)
+if [ -f "$ENV_FILE" ]; then
+    PROJECT_ID=$(grep -E "^GOOGLE_CLOUD_PROJECT=" "$ENV_FILE" | cut -d'=' -f2)
+fi
+
+if [ -z "$PROJECT_ID" ]; then
+    PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
+fi
 
 if [ -z "$PROJECT_ID" ]; then
     echo "Error: Could not determine Google Cloud Project ID."
